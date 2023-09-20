@@ -1,0 +1,41 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000;
+	min-height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.particles {
+	margin-top: 20rem;
+	width: 320px;
+	height: 320px;
+	position: relative;
+	scale: 2;
+}
+
+.particle {
+	position: absolute;
+	left: 320px;
+	top: 150px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	animation: ro 1s linear infinite;
+	transform-origin: -160px 0;
+	rotate: calc(360deg * var(--i) / 16);
+	animation-delay: calc(1s / 5.3 * var(--i));
+}
+
+@keyframes ro {
+	50% {
+		transform: translate(-150px);
+		box-shadow: 0 0 10px 10px #333;
+	}
+}
